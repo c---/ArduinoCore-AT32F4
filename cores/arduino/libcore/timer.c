@@ -77,6 +77,7 @@ void Timer_ClockCmd(tmr_type* TIMx, bool Enable)
 
 static float Qsqrt(float number)
 {
+    _Static_assert(sizeof(long) == sizeof(float));
     union {
       long i;
       float y;
